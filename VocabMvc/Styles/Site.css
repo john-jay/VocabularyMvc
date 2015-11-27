@@ -1,0 +1,16 @@
+﻿body {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Sans-Serif;
+}
+
+.correct {
+    color: green;
+}
+
+.answer-btn {
+    padding: 4px;
+    width: 87px;
+    background-color: white;
+}

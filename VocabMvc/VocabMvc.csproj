@@ -75,7 +75,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\app.js" />
+    <Content Include="App\examples\angular\app.js" />
+    <Content Include="App\examples\angular\index.html" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
@@ -85,6 +87,7 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Styles\Site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,7 +110,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\examples\knockout\" />
+    <Folder Include="App\vocabulary\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
