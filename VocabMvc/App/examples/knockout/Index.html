@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ko Demo</title>
+    <meta charset="utf-8" />
+    <link href="/Styles/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Vocabulary</h2>
+    <p class="help"></p>
+    <div data-bind="with: curItem">
+        <p data-bind="text: def"></p>
+    </div>
+    <div data-bind="foreach: randomChoices">
+        <button data-bind="text: $data, click: $parent.clickWord" class="answer-btn"></button>
+    </div>
+    <p data-bind="if: showCorrect" class="correct">
+        Correct <button data-bind="click: goNext">Next</button>
+    </p>
+    <p data-bind="if: isComplete" class="correct">
+        Complete!
+    </p>
+
+    <script src="/Scripts/jquery-2.1.4.js"></script>
+    <script src="/Scripts/knockout-3.4.0.debug.js"></script>
+    <script src="/App/vocabulary/Util.js"></script>
+    <script src="/App/vocabulary/VocItem.js"></script>
+    <script src="/App/examples/knockout/Quiz.js"></script>
+</body>
+</html>

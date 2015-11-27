@@ -79,6 +79,7 @@
   <ItemGroup>
     <Content Include="App\examples\angular\app.js" />
     <Content Include="App\examples\angular\index.html" />
+    <Content Include="App\examples\knockout\Index.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
@@ -89,6 +90,9 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\knockout-3.4.0.debug.js" />
     <Content Include="Scripts\knockout-3.4.0.js" />
     <Content Include="Styles\Site.css" />
@@ -106,6 +110,8 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Assets\VocTest.json" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -114,14 +120,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\examples\knockout\" />
-    <Folder Include="App\vocabulary\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App\examples\knockout\Quiz.ts" />
+    <TypeScriptCompile Include="App\vocabulary\Util.ts" />
+    <TypeScriptCompile Include="App\vocabulary\VocItem.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
