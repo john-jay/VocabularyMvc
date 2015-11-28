@@ -5,12 +5,13 @@
     <link href="/Styles/Site.css" rel="stylesheet" />
 </head>
 <body ng-app="app" ng-controller="QuizCtrl as q">
-    <h1>Vocab with Angular</h1>
+    <a href="/">Home</a>
+    <h1>Angular Example</h1>
     <div>
         <p ng-bind="q.curItem.def"></p>
     </div>
     <div>
-        <button ng-repeat="choice in q.randomChoices" ng-bind="choice" ng-click="q.clickWord" class="answer-btn"></button>
+        <button ng-repeat="choice in q.randomChoices" ng-bind="choice" ng-click="$parent.q.clickWord" class="answer-btn"></button>
     </div>
     <p ng-if="q.showCorrect" class="correct">
         Correct <button ng-click="goNext">Next</button>
