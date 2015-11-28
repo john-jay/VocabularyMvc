@@ -1,14 +1,9 @@
-﻿(function () {
-    'use strict';
-
+var Angular;
+(function (Angular) {
     angular.module('app', [
         // Angular modules
         'ngAnimate',
         'ngRoute'
-
-        // Custom modules
-
-        // 3rd Party Modules
-        
-    ]);
-})();
+    ])
+        .controller('QuizCtrl', Angular.QuizCtrl);
+})(Angular || (Angular = {}));

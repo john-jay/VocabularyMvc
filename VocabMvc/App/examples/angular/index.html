@@ -1,14 +1,31 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Vocab ala Angular</title>
+    <title>Vocab with Angular</title>
     <link href="/Styles/Site.css" rel="stylesheet" />
 </head>
-<body ng-app="app">
-    <h1>Vocab ala Angular</h1>
+<body ng-app="app" ng-controller="QuizCtrl as q">
+    <h1>Vocab with Angular</h1>
+    <div>
+        <p ng-bind="q.curItem.def"></p>
+    </div>
+    <div>
+        <button ng-repeat="choice in q.randomChoices" ng-bind="choice" ng-click="q.clickWord" class="answer-btn"></button>
+    </div>
+    <p ng-if="q.showCorrect" class="correct">
+        Correct <button ng-click="goNext">Next</button>
+    </p>
+    <p ng-if="q.isComplete" class="correct">
+        Complete!
+    </p>
+
+    <script src="/Scripts/jquery-2.1.4.js"></script>
     <script src="/Scripts/angular.js"></script>
     <script src="/Scripts/angular-animate.js"></script>
     <script src="/Scripts/angular-route.js"></script>
+    <script src="/App/vocabulary/Util.js"></script>
+    <script src="/App/vocabulary/VocItem.js"></script>
+    <script src="./QuizCtrl.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>
