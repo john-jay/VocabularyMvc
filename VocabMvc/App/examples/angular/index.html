@@ -11,10 +11,12 @@
         <p ng-bind="q.curItem.def"></p>
     </div>
     <div>
-        <button ng-repeat="choice in q.randomChoices" ng-bind="choice" ng-click="$parent.q.clickWord" class="answer-btn"></button>
+        <span ng-repeat="choice in q.randomChoices">
+            <button ng-bind="choice" ng-click="$parent.q.clickWord(choice)" class="answer-btn"></button>
+        </span>
     </div>
     <p ng-if="q.showCorrect" class="correct">
-        Correct <button ng-click="goNext">Next</button>
+        Correct <button ng-click="q.goNext()">Next</button>
     </p>
     <p ng-if="q.isComplete" class="correct">
         Complete!
