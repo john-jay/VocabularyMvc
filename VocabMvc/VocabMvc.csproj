@@ -77,9 +77,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App\examples\angular\app.ts" />
-    <Content Include="App\examples\angular\index.html" />
-    <Content Include="App\examples\knockout\Index.html" />
+    <TypeScriptCompile Include="App\examples\Angular\app.ts" />
+    <Content Include="App\examples\Angular\index.html" />
+    <Content Include="App\examples\Knockout\Index.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
@@ -125,8 +125,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App\examples\angular\QuizCtrl.ts" />
-    <TypeScriptCompile Include="App\examples\knockout\Quiz.ts" />
+    <TypeScriptCompile Include="App\examples\Angular\QuizCtrl.ts" />
+    <TypeScriptCompile Include="App\examples\Knockout\Quiz.ts" />
     <TypeScriptCompile Include="App\vocabulary\Util.ts" />
     <TypeScriptCompile Include="App\vocabulary\VocItem.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />

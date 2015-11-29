@@ -3,24 +3,29 @@
 <head>
     <title>Vocab with Angular</title>
     <link href="/Styles/Site.css" rel="stylesheet" />
+    <style>
+        .ng-cloak {
+            display: none !important;
+        }
+    </style>
 </head>
 <body ng-app="app" ng-controller="QuizCtrl as q">
     <a href="/">Home</a>
     <h1>Angular Example</h1>
-    <div>
+    <div class="ng-cloak">
         <p ng-bind="q.curItem.def"></p>
+        <div>
+            <span ng-repeat="choice in q.randomChoices">
+                <button ng-bind="choice" ng-click="$parent.q.clickWord(choice)" class="answer-btn"></button>
+            </span>
+        </div>
+        <p ng-if="q.showCorrect" class="correct">
+            Correct <button ng-click="q.goNext()">Next</button>
+        </p>
+        <p ng-if="q.isComplete" class="correct">
+            Complete!
+        </p>
     </div>
-    <div>
-        <span ng-repeat="choice in q.randomChoices">
-            <button ng-bind="choice" ng-click="$parent.q.clickWord(choice)" class="answer-btn"></button>
-        </span>
-    </div>
-    <p ng-if="q.showCorrect" class="correct">
-        Correct <button ng-click="q.goNext()">Next</button>
-    </p>
-    <p ng-if="q.isComplete" class="correct">
-        Complete!
-    </p>
 
     <script src="/Scripts/jquery-2.1.4.js"></script>
     <script src="/Scripts/angular.js"></script>
