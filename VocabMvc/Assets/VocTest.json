@@ -2,15 +2,15 @@
   "lesson": [
     {
       "word": "Glockenspiel",
-      "def": "A musical instrument with tuned metal bars"
+      "def": "A percussion instrument with tuned metal bars."
     },
     {
       "word": "Semaphore",
-      "def": "A synchronization token for asynchronous processes"
+      "def": "A synchronization token for asynchronous processes."
     },
     {
       "word": "Sloop",
-      "def": "A boat with two masts"
+      "def": "A one-masted sailboat with a mainsail and a jib."
     }
   ]
 }
