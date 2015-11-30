@@ -9,8 +9,12 @@
     color: green;
 }
 
+.answer-div {
+    width: 600px;
+}
+
 .answer-btn {
     padding: 4px;
-    width: 87px;
+    width: 145px;
     background-color: white;
 }

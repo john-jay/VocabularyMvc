@@ -1,16 +1,36 @@
 ﻿{
   "lesson": [
     {
-      "word": "Glockenspiel",
-      "def": "A percussion instrument with tuned metal bars."
-    },
-    {
       "word": "Semaphore",
       "def": "A synchronization token for asynchronous processes."
     },
     {
-      "word": "Sloop",
-      "def": "A one-masted sailboat with a mainsail and a jib."
+      "word": "Algorithm",
+      "def": "A strategy to solve a problem."
+    },
+    {
+      "word": "Big O notation",
+      "def": "A tool to analyse the scaleability and efficiency of algorithms."
+    },
+    {
+      "word": "Recursion",
+      "def": "A function that calls itself."
+    },
+    {
+      "word": "Hash table",
+      "def": "A data structure to implement an associative array."
+    },
+    {
+      "word": "Concurrency",
+      "def": "A system that allows tasks to run in overlapping time periods."
+    },
+    {
+      "word": "Race condition",
+      "def": "A system with results depending on the timing of events."
+    },
+    {
+      "word": "Deadlock",
+      "def": "When two or more transactions are waiting for each other."
     }
   ]
 }

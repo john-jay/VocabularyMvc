@@ -12,7 +12,7 @@
     <div data-bind="with: curItem">
         <p data-bind="text: def"></p>
     </div>
-    <div data-bind="foreach: randomChoices">
+    <div data-bind="foreach: randomChoices" class="answer-div">
         <button data-bind="text: $data, click: $parent.clickWord" class="answer-btn"></button>
     </div>
     <p data-bind="if: showCorrect" class="correct">
