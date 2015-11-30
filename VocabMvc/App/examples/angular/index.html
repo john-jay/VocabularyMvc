@@ -15,7 +15,7 @@
     <div class="ng-cloak">
         <p ng-bind="q.curItem.def"></p>
         <div class="answer-div">
-            <span ng-repeat="choice in q.randomChoices">
+            <span ng-repeat="choice in q.choices">
                 <button ng-bind="choice" ng-click="$parent.q.clickWord(choice)" class="answer-btn"></button>
             </span>
         </div>

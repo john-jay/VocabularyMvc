@@ -21,10 +21,10 @@
     }
 
     // Create a new array from existing elements in a random order.
-    static mixUp(source: string[]): string[] {
+    static mixUp(source: any[]): any[] {
         var length = source.length;
         var order = this.getRandomArray(length);
-        var result: string[] = [];
+        var result = [];
         for (var i = 0; i < length; i++) {
             result.push(source[order[i]]);
         }

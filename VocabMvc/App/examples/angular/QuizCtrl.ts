@@ -1,16 +1,14 @@
-﻿
-module Angular { 
+﻿module Angular {
     export class QuizCtrl {
         testItems: VocItem[];
         choices: string[];
         seq = 0;
 
-        curItem : VocItem;
+        curItem: VocItem;
         showCorrect = false;
-        randomChoices : string[];
         isComplete = false;
 
-        public static $inject= ['$scope'];
+        public static $inject = ['$scope'];
         constructor(private $scope: ng.IScope) {
             this.loadData();
         }
@@ -20,10 +18,9 @@ module Angular {
                 var items: VocItem[] = $.map(data.lesson, item => {
                     return new VocItem(item);
                 });
-                this.testItems = items;
-                this.choices = $.map(items, item => { return item.word; });
+                this.testItems = Util.mixUp(items);
+                this.choices = $.map(items, item => { return item.word; }).sort();
                 this.goNext();
-                this.randomChoices = Util.mixUp(this.choices);
                 this.$scope.$apply();
             });
         }
@@ -35,8 +32,8 @@ module Angular {
         goNext = () => {
             this.showCorrect = false;
             if (this.seq === this.testItems.length) {
-                this.curItem =null;
-                this.randomChoices =[];
+                this.curItem = null;
+                this.choices = [];
                 this.isComplete = true;
             } else {
                 this.curItem = this.testItems[this.seq];
