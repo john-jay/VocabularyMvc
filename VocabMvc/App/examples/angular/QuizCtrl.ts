@@ -8,20 +8,18 @@
         showCorrect = false;
         isComplete = false;
 
-        public static $inject = ['$scope'];
-        constructor(private $scope: ng.IScope) {
+        public static $inject = ['$scope', '$http'];
+        constructor(private $scope: ng.IScope, private $http: ng.IHttpService) {
             this.loadData();
         }
 
         loadData() {
-            $.getJSON("/Assets/VocTest.json", data => { // May use ng-service
-                var items: VocItem[] = $.map(data.lesson, item => {
-                    return new VocItem(item);
-                });
-                this.testItems = Util.mixUp(items);
-                this.choices = $.map(items, item => { return item.word; }).sort();
+            this.$http.get('/Assets/VocTest.json').then((response) => {
+                var data = <any>response.data;
+                var items = <VocItem[]>data.lesson; 
+                this.testItems = Util.mixUp(items); // randomized questions
+                this.choices = $.map(items, item => { return item.word; }).sort(); // sorted answers
                 this.goNext();
-                this.$scope.$apply();
             });
         }
         clickWord = (clickedItem: string) => {
