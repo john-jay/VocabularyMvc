@@ -5,7 +5,7 @@
         seq = 0;
 
         curItem: VocItem;
-        showCorrect = false;
+        isCorrect = undefined;
         isComplete = false;
 
         public static $inject = ['$scope', '$http'];
@@ -25,10 +25,10 @@
         clickWord = (clickedItem: string) => {
             // show "correct" message and next button
             var isCorrect = clickedItem === this.curItem.word;
-            this.showCorrect = isCorrect;
+            this.isCorrect = isCorrect;
         }
         goNext = () => {
-            this.showCorrect = false;
+            this.isCorrect = undefined;
             if (this.seq === this.testItems.length) {
                 this.curItem = null;
                 this.choices = [];

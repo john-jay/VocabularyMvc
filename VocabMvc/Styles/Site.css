@@ -9,6 +9,10 @@
     color: green;
 }
 
+.wrong {
+    color: red;
+}
+
 .answer-div {
     width: 600px;
 }
@@ -17,4 +21,11 @@
     padding: 4px;
     width: 145px;
     background-color: white;
+}
+
+.next-btn {
+    padding: 4px;
+    width: 100px;
+    margin-left: 15px;
+    background-color: lightgreen;
 }

@@ -5,7 +5,7 @@
         seq = 0;
 
         curItem = ko.observable<VocItem>();
-        showCorrect = ko.observable(false);
+        isCorrect = ko.observable(undefined);
         isComplete = ko.observable(false);
 
         constructor() {
@@ -26,10 +26,10 @@
         clickWord = (clickedItem: string) => {
             // show "correct" message and next button
             var isCorrect = clickedItem === this.curItem().word;
-            this.showCorrect(isCorrect);
+            this.isCorrect(isCorrect);
         }
         goNext = () => {
-            this.showCorrect(false);
+            this.isCorrect(undefined);
             if (this.seq === this.testItems.length) {
                 this.curItem(null);
                 this.choices([]);

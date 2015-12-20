@@ -15,8 +15,9 @@
     <div data-bind="foreach: choices" class="answer-div">
         <button data-bind="text: $data, click: $parent.clickWord" class="answer-btn"></button>
     </div>
-    <p data-bind="if: showCorrect" class="correct">
-        Correct <button data-bind="click: goNext">Next</button>
+    <p data-bind="if: isCorrect() != undefined">
+        <span data-bind="if: isCorrect()" class="correct">Correct <button data-bind="click: goNext" class="next-btn">Next =></button></span>
+        <span data-bind="if: !isCorrect()" class="wrong">Try again </span>
     </p>
     <p data-bind="if: isComplete" class="correct">
         Complete!
