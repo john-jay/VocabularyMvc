@@ -19,13 +19,7 @@
                 <button ng-bind="choice" ng-click="$parent.q.clickWord(choice)" class="answer-btn"></button>
             </span>
         </div>
-        <p ng-if="q.isCorrect != undefined">
-            <span ng-if="q.isCorrect" class="correct">Correct <button ng-click="q.goNext()" class="next-btn">Next =></button></span>
-            <span ng-if="!q.isCorrect" class="wrong">Try again </span>
-        </p>
-        <p ng-if="q.isComplete" class="correct">
-            Complete!
-        </p>
+        <div ng-include="'vocab-feedback.html'"></div>
     </div>
 
     <script src="/Scripts/jquery-2.1.4.js"></script>

@@ -1,0 +1,7 @@
+﻿<p ng-if="q.isCorrect != undefined">
+    <span ng-if="q.isCorrect" class="correct">Correct <button ng-click="q.goNext()" class="next-btn">Next =></button></span>
+    <span ng-if="!q.isCorrect" class="wrong">Try again </span>
+</p>
+<p ng-if="q.isComplete">
+    Complete!
+</p>

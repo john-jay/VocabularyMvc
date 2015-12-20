@@ -79,6 +79,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="App\examples\Angular\app.ts" />
     <Content Include="App\examples\Angular\index.html" />
+    <Content Include="App\examples\Angular\vocab-feedback.html" />
     <Content Include="App\examples\Knockout\Index.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

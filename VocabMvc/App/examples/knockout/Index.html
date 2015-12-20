@@ -15,13 +15,17 @@
     <div data-bind="foreach: choices" class="answer-div">
         <button data-bind="text: $data, click: $parent.clickWord" class="answer-btn"></button>
     </div>
-    <p data-bind="if: isCorrect() != undefined">
-        <span data-bind="if: isCorrect()" class="correct">Correct <button data-bind="click: goNext" class="next-btn">Next =></button></span>
-        <span data-bind="if: !isCorrect()" class="wrong">Try again </span>
-    </p>
-    <p data-bind="if: isComplete" class="correct">
-        Complete!
-    </p>
+    <div data-bind="template: 'vocab-feedback'"></div>
+
+    <script type="text/html" id="vocab-feedback">
+        <p data-bind="if: isCorrect() != undefined">
+            <span data-bind="if: isCorrect()" class="correct">Correct <button data-bind="click: goNext" class="next-btn">Next =></button></span>
+            <span data-bind="if: !isCorrect()" class="wrong">Try again </span>
+        </p>
+        <p data-bind="if: isComplete" class="correct">
+            Complete!
+        </p>
+    </script>
 
     <script src="/Scripts/jquery-2.1.4.js"></script>
     <script src="/Scripts/knockout-3.4.0.debug.js"></script>
