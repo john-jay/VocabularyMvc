@@ -9,5 +9,10 @@
         // 3rd Party Modules
         
     ])
-    .controller('QuizCtrl', QuizCtrl);
+        .controller('QuizCtrl', QuizCtrl)
+        .directive('vocabFeedback', () => {
+            return {
+                templateUrl: 'vocab-feedback.html'
+            }
+        });
 }
